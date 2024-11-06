@@ -31,7 +31,9 @@ class DesktopScreen extends ConsumerWidget {
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeInOut,
                 left: MediaQuery.sizeOf(context).width * 0.29,
-                bottom: isStartMenuOpen ? AppDimensions.taskbarHeight + 5 : 0,
+                bottom: isStartMenuOpen
+                    ? AppDimensions.taskbarHeight + 5
+                    : -MediaQuery.sizeOf(context).height * 0.82,
                 child: AnimatedOpacity(
                   opacity: isStartMenuOpen ? 1 : 0,
                   duration: const Duration(milliseconds: 200),
